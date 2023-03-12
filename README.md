@@ -4,11 +4,11 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 Setting Up Project
 ```bash
-git clone https://github.com/manavchawla2012/doubt-resolution-ui.git
-cd doubt-resolution-ui
+git clone https://github.com/manavchawla2012/rudder-stack-ui.git
+cd rudder-stack-ui
 npm install
 touch .env
-echo "NEXT_PUBLIC_API_URL=http://${rest-project-link}/api/v1" >> .env
+echo "NEXT_PUBLIC_API_URL=http://${rest-project-link}/api/business" >> .env
 ```
 
 First, run the development server:
