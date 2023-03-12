@@ -1,14 +1,9 @@
 import {checkAuthenticationServerSide} from "../lib/login";
 import PageHOC from "../hoc/PageHOC";
-import {CreateDoubtComponent, GetAllDoubtsComponent} from "../components/doubt"
-
 
 const IndexPage = (props) => {
     return(
         <>
-            {!(props.user_details.is_superuser || props.user_details.is_staff) ?
-            <CreateDoubtComponent/>: ""}
-            <GetAllDoubtsComponent/>
         </>
     )
 }
@@ -18,4 +13,4 @@ export async function getServerSideProps(context) {
     return {props: {}}
 }
 
-export default PageHOC(IndexPage, {heading: "Raise Doubt", navigation: "Raise Doubt"})
+export default PageHOC(IndexPage, {heading: "Create Tracking Plan", navigation: "Create Tracking Plan"})

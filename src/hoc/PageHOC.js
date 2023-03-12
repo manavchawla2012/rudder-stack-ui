@@ -1,5 +1,4 @@
 import {Component} from "react";
-import {getUserDetailsAction} from "../redux/actions/authAction";
 import {connect} from "react-redux";
 import {WebsiteNavbarComponent} from "../components/common"
 import {setLoader} from "../redux/actions/commonAction";
@@ -10,11 +9,6 @@ const PageHOC = (WrappedComponent, extra={}) => {
         constructor(props) {
             super(props);
         }
-
-        componentDidMount() {
-            this.props.userDetails()
-        }
-
         render() {
             return (
                 <>
@@ -39,7 +33,7 @@ const PageHOC = (WrappedComponent, extra={}) => {
 
     const mapDispatchToProps = dispatch => {
         return {
-            userDetails: () => dispatch(getUserDetailsAction()),
+            //userDetails: () => dispatch(getUserDetailsAction()),
             setLoader: (state) => dispatch(setLoader(state))
         }
     }

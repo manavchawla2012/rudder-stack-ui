@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 import {FaUserCircle, FaUser, FaLock} from "react-icons/fa";
-import PageHOC from "../hoc/PageHOC";
 import {checkAuthenticationServerSide} from "../lib/login";
 import {connect} from "react-redux";
 import {loginAction} from "../redux/actions/authAction";
@@ -57,7 +56,7 @@ export async function getServerSideProps(context) {
     return {props: {}}
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = () => {
     return {}
 }
 

@@ -18,19 +18,19 @@ export const getUserDetailsAction = () => {
                 const response_keys = response.keys
                 url += `?error=${response[response_keys[0]]}`
             }
-           clientRedirect(url)
+            clientRedirect(url)
         })
     }
 }
 
 export const loginAction = (user_name, password) => {
     return dispatch => {
-        axios.post("/authenticate/login", {
+        axios.post("/auth/login", {
             "username": user_name,
             "password": password
         }).then(res => {
             const cookies = new Cookies()
-            const token = res.data.token
+            const token = res.data.data.token
             dispatch({
                 type: USER_LOGIN,
                 user_key: token
@@ -48,14 +48,14 @@ export const loginAction = (user_name, password) => {
     }
 }
 
-export const logoutAction = () =>{
+export const logoutAction = () => {
     return async (dispatch) => {
-        const api_resp = await axios.post("/authenticate/logout")
+        const api_resp = await axios.post("/auth/logout")
         const cookies = new Cookies()
         cookies.remove('token')
         dispatch({
             type: USER_LOGOUT
         })
-        clientRedirect("/")
+        clientRedirect("/login")
     }
 }

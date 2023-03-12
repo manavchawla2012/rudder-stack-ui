@@ -1,15 +1,16 @@
 import Cookies from 'cookies'
-import axios from "axios";
 import {serverRedirect} from "./redirect";
 
 const verifyToken = async (token) => {
-    return axios.post(`${process.env.NEXT_PUBLIC_API_URL}/authenticate/verify-token`, {}, {
+    return fetch(`${process.env.NEXT_PUBLIC_API_URL}/auth/verify`, {
         headers: {
-            'Authorization': `Token ${token}`
+            'authorization': `Token ${token}`,
+            'Content-Type': 'application/json',
+            "Access-Control-Allow-Origin": "*",
         }
-    }).then((res) => {
+    }).then((_) => {
         return true
-    }).catch(err => {
+    }).catch(_ => {
         return false
     })
 }
