@@ -1,8 +1,8 @@
 import {checkAuthenticationServerSide} from "../lib/login";
 import PageHOC from "../hoc/PageHOC";
 
-const IndexPage = (props) => {
-    return(
+const IndexPage = () => {
+    return (
         <>
         </>
     )
@@ -13,4 +13,4 @@ export async function getServerSideProps(context) {
     return {props: {}}
 }
 
-export default PageHOC(IndexPage, {heading: "Create Tracking Plan", navigation: "Create Tracking Plan"})
+export default PageHOC(IndexPage, {heading: "Welcome", navigation: "Welcome"})

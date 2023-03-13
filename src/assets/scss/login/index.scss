@@ -14,8 +14,7 @@
   width:100%;
 }
 .form-box{
-  width:380px;
-  height:450px;
+  min-width:380px;
   background-color:black;
   padding:20px;
   display:flex;
@@ -48,6 +47,18 @@ button{
 .social i:hover{
   color:red;
   cursor:pointer;
+}
+
+.sign-up {
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  input[type=number] {
+    -moz-appearance: textfield;
+  }
 }
 
 

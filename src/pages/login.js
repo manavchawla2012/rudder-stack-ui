@@ -41,7 +41,7 @@ const LoginPage = ({login}) => {
                             </button>
                             <div className="message">
                                 <div><input type="checkbox"/> Remember ME</div>
-                                <div><a href="#">Forgot your password</a></div>
+                                <div><a href="/signup">Signup</a></div>
                             </div>
                         </form>
                     </div>

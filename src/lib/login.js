@@ -18,7 +18,8 @@ const verifyToken = async (token) => {
 const checkAuthenticationServerSide = async (context) => {
     // function to check auth server side
     const redirect_save_url = [
-        '/login'
+        '/login',
+        '/signup'
     ]
     const cookies = new Cookies(context.req, context.res);
     const page_url = context.resolvedUrl.split(/[?#]/)[0];

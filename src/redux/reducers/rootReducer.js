@@ -1,12 +1,12 @@
 import {combineReducers} from 'redux';
 import authReducer from "./authReducer";
 import commonReducer from "./commonReducer";
-import doubtReducer from "./doubtsReducer";
+import trackingPlanReducer from "./trackingPlanReducer";
 
 const rootReducer = combineReducers({
     auth: authReducer,
     common: commonReducer,
-    doubt: doubtReducer
+    trackingPlan: trackingPlanReducer,
 });
 
 export default rootReducer;

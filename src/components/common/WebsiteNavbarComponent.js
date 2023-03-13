@@ -3,7 +3,7 @@ import {logoutAction} from "../../redux/actions/authAction";
 import {connect} from "react-redux";
 import { useRouter } from 'next/router'
 
-const WebsiteNavBarComponent = ({logout, navigation}) => {
+const WebsiteNavBarComponent = ({logout}) => {
     const router = useRouter()
     const navs = [
         {
@@ -12,7 +12,7 @@ const WebsiteNavBarComponent = ({logout, navigation}) => {
         },
         {
             name: 'View Plans',
-            url: '/plans'
+            url: '/tracking-plan'
         },
     ]
     return (

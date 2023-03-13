@@ -27,8 +27,10 @@ instance.interceptors.response.use(res => {
 }, error => {
     if (error.response) {
         const status_code = error.response.status;
+        const cookies = new Cookies()
         if (status_code === 401) {
             clientRedirect(`/login?error=${showErrorMessageFromAxios(error, "Please Login Again...")}`)
+            cookies.remove('token')
         }
     }
     throw error.response
